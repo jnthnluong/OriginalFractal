@@ -1,5 +1,6 @@
 void setup() {
   size(800, 700);
+  background(120,100,100);
   rectMode(CENTER);
   noLoop();
   shapeMode(CENTER);
@@ -25,15 +26,19 @@ public void myFractal(float x, float y, float size) {
   //ellipse(x1, y1-size/2, size, size);
   
 
-  if (size > 10) {
-  
+  if (size > 1) {
+    fill(255,0,0);
     myFractal(x+size,y-size,size/2);
+    fill(0,255,0);
     myFractal(x-size,y+size,size/2);
+    fill(0,0,255);
     myFractal(x+size,y+size,size/2);
+    fill(255,255,0);
     myFractal(x-size,y-size,size/2);
-   
+   fill(160);
     
    
   }
+  
   ellipse(x,y,size,size);
 }
